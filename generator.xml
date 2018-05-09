@@ -2,112 +2,31 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
 	<!-- 数据库驱动包位置 -->
-	<classPathEntry location="C:\work\project\mybatis\mysql-connector-java-5.1.43.jar" />
+	<classPathEntry location=".\mysql-connector-java-5.1.43.jar" />
 	<context id="DB2Tables" targetRuntime="MyBatis3">
 		<commentGenerator>
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
 		<!-- 数据库链接URL、用户名、密码 -->
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/yichengpai_data2" userId="root" password="123456">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/application_dictionary" userId="root" password="123456">
 		</jdbcConnection>
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 		<!-- 生成模型的包名和位置 -->
-		<javaModelGenerator targetPackage="com.yichengpai.finacial.checking.model" targetProject="C:\work\project\mybatis">
+		<javaModelGenerator targetPackage="com.tech.application.dictionary.model" targetProject=".\">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="false" />
 		</javaModelGenerator>
 		<!-- 生成的Mapper映射文件包名和位置 -->
-		<sqlMapGenerator targetPackage="com.yichengpai.finacial.checking.dao" targetProject="C:\work\project\mybatis">
+		<sqlMapGenerator targetPackage="com.tech.application.dictionary.dao" targetProject=".\">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!-- 生成Mapper接口包名和位置 -->
-		<javaClientGenerator type="XMLMAPPER" targetPackage="com.yichengpai.finacial.checking.dao" targetProject="C:\work\project\mybatis">
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.tech.application.dictionary.dao" targetProject=".\">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
-		<!-- 要生成那些表(更改tableName和domainObjectName就可以) --> 
-		<!--   
-		<table tableName="deposit_account" domainObjectName="DepositAccount" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		<table tableName="deposit_transaction" domainObjectName="DepositTransaction" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		<table tableName="deposit_withdraw" domainObjectName="DepositWithdraw" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		
-		<table tableName="payment" domainObjectName="Payment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		
-		<table tableName="payment_notify_transaction" domainObjectName="PaymentNotifyTransaction" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		-->
-		<table tableName="deposit" domainObjectName="Deposit" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-			
-		<table tableName="deposit_finacial" domainObjectName="DepositFinacial" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		
-		
-		<!-- table tableName="acc_business_info" domainObjectName="AccBusinessInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		<table tableName="cb_coding" domainObjectName="CbCoding" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		<table tableName="sign_up_info" domainObjectName="SignUpInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" / >
-		<table tableName="recharge_order" domainObjectName="RechargeOrder" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /-->
-<!-- 		<table tableName="global_provider_info" domainObjectName="GlobalProviderInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
-<!-- 		<table tableName="global_provider_define" domainObjectName="GlobalProviderDefine" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
-<!-- 		<table tableName="global_provider_detail" domainObjectName="GlobalProviderDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
-<!-- 		<table tableName="mobile_segment" domainObjectName="MobileSegment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
-<!-- 		<table tableName="mobile_adjust_price" domainObjectName="MobileServiceInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
-<!-- 		<table tableName="mobile_callback_info" domainObjectName="MobileCallbackInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!-- 			<table tableName="ofpay_mobile_order" domainObjectName="OfpayMobileOrder" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!-- 		   <table tableName="global_access_detail" domainObjectName="GlobalAccessDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_access_info" domainObjectName="GlobalAccessInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_access_ip" domainObjectName="GlobalAccessIp" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_access_lock" domainObjectName="GlobalAccessLock" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_access_permit" domainObjectName="GlobalAccessPermit" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_access_role" domainObjectName="GlobalAccessRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_institution" domainObjectName="GlobalInstitution" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_interface" domainObjectName="GlobalInterface" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_link" domainObjectName="GlobalLink" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_permit" domainObjectName="GlobalPermit" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_provider_define" domainObjectName="GlobalProviderDefine" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_provider_info" domainObjectName="GlobalProviderInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_role" domainObjectName="GlobalRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_role_permit" domainObjectName="GlobalRolePermit" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_user" domainObjectName="GlobalUser" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_user_permit" domainObjectName="GlobalUserPermit" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!--            <table tableName="global_user_role" domainObjectName="GlobalUserRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
-<!-- 	  <table tableName="mobileflow_background_detail" domainObjectName="MobileflowBackgroundDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  
-           <table tableName="mobileflow_callback_info" domainObjectName="MobileflowCallbackInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  
-           <table tableName="mobileflow_order_detail" domainObjectName="MobileflowOrderDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  
-           <table tableName="mobileflow_service_info" domainObjectName="MobileflowServiceInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  
-           <table tableName="mobileflow_supp_quotation" domainObjectName="MobileflowSuppQuotation" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  
-           <table tableName="mobileflow_trade_assignment" domainObjectName="MobileflowTradeAssignment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  
-           
-           <table tableName="platform_k3_mapping" domainObjectName="PlatformK3Mapping" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  
-		   <table tableName="platform_k3_outlog" domainObjectName="PlatformK3Outlog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  
-		   --> 
-
-		   <!--
-		   <table tableName="sc_product" domainObjectName="Product" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  
-
-		   <table tableName="sc_product_attribute" domainObjectName="ProductAttribute" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> 
-		   
-		    <table tableName="sc_product_attribute_value" domainObjectName="ProductAttributeValue" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-
-			 <table tableName="sc_product_category" domainObjectName="ProductCategory" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-
-			<table tableName="sc_logistics_model" domainObjectName="LogisticsModel" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-
-			<table tableName="sc_logisticser_code" domainObjectName="LogisticserCode" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-
-			<table tableName="sc_order" domainObjectName="Order" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-
-			<table tableName="sc_order" domainObjectName="Order" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-
-			<table tableName="sc_order_detail" domainObjectName="OrderDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-
-			<table tableName="sc_distributor_order" domainObjectName="DistributorOrder" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		   
-			<table tableName="sc_sku" domainObjectName="Sku" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-	
-			<table tableName="unionpay_refund_detail" domainObjectName="UnionPayRefundDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		   		
-			<table tableName="sc_order" domainObjectName="Order" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-	   -->
-					
-			<!-- <table tableName="boc_refund_detail" domainObjectName="BocRefundDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />  -->
+		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->   
+		<table tableName="region" domainObjectName="region" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
 	</context>
 </generatorConfiguration>
